@@ -1,0 +1,24 @@
+*.py[cod]
+*$py.class
+.venv/
+.secure_shares/
+test_temp_secure_shares/
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Temporary files and uploads
+uploads/
+temp/
+*.pdf
+
+# Secure storage
+.secure_shares/
+test_temp_secure_shares/

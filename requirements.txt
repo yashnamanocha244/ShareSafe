@@ -1,0 +1,18 @@
+# ShareSafe — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Core UI ────────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+
+# ── OCR engines (dual: Tesseract primary → EasyOCR fallback) ──────────────────
+pytesseract>=0.3.10        # Wrapper for Tesseract-OCR binary (optional but faster)
+easyocr>=1.7.0             # Pure-Python fallback OCR; downloads models on first use (~140 MB)
+                           # Note: EasyOCR requires torch — installed automatically as a dependency
+
+# ── Image processing ───────────────────────────────────────────────────────────
+opencv-python-headless>=4.8.0   # QR detection (cv2.QRCodeDetector), masking, bounding boxes
+pillow>=10.0.0                  # Image I/O, drawing, Aadhaar/PAN sample generation
+numpy>=1.24.0                   # Array operations for masking and blur
+
+# ── Standard library modules used (no installation needed) ────────────────────
+# re, secrets, sqlite3, hashlib, io, os, pathlib, datetime, shutil, logging
